@@ -1,7 +1,7 @@
 # ME : <p align="center">GeminiBot</p>
 
 <p align="center">
-    <a href="https://github.com/EpitechPromo2026//B-CCP-400-REN-4-1-theplazza-guillaume.papineau/blob/main/LICENSE">
+    <a href="https://github.com/GeminiBot/GeminiBot/blob/main/LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-brightgreen.svg?style=for-the-badge" alt="License: MIT">
     </a>
     <a>
