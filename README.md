@@ -1,4 +1,4 @@
-# ME : <p align="center">GeminiBot</p>
+# <p align="center">GeminiBot</p>
 
 <p align="center">
     <a href="https://github.com/GeminiBot/GeminiBot/blob/main/LICENSE">
@@ -7,10 +7,11 @@
     <a>
         <img src="https://img.shields.io/badge/python-version?style=for-the-badge" alt="Python: 3.7">
     </a>
+    <a>
+        <img src="https://komarev.com/ghpvc/?username=GeminiBot&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="GeminiBot"/>
+    </a>
 </p>
 
-Status: in progress
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=GeminiBot&label=Profile%20views&color=0e75b6&style=flat" alt="GeminiBot" /> </p>
 
 ## :placard: Table of Contents
 - [Description](#description)
