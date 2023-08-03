@@ -4,6 +4,7 @@ import sys
 sys.path.insert(0,"../../")
 from src.config.config import ConfigParser
 import requests
+import base64
 
 app = Flask(__name__)
 
@@ -17,9 +18,9 @@ token = parser.get_token()
 if not token:
     logger.error("GITHUB_TOKEN not set in environment variables")
     sys.exit(1)
-
 @app.route("/")
 def hello():
+    handle_webhook()
     return "Hello World!"
 
 @app.route("/webhook", methods=['POST'])
@@ -31,9 +32,34 @@ def handle_webhook():
         print("No JSON data in request")
         abort(400)
     print("Received webhook event: ", data.get('action'))
-    if data.get('action') == 'opened':
-        issue_comment(data)
+    #if data.get('action') == 'opened':
+    #    issue_comment(data)
+    if data.get('action') == 'pinned':
+        modify_file(data)
     return "", 200
+
+def modify_file(data):
+    headers = {
+        'Authorization': 'token ' + token,
+        'Accept': 'application/vnd.github.v3+json',
+    }
+    path = f"{data['issue']['number']}.txt"
+    url = f"https://api.github.com/repos/{data['repository']['owner']['login']}/{data['repository']['name']}/contents/{path}"
+
+    content = "The content of the file"  # Change this to the actual content
+    encoded_content = base64.b64encode(content.encode()).decode()
+
+    payload = {
+        'message': 'Creating or updating a file',
+        'content': encoded_content,
+    }
+
+    response = requests.put(url, headers=headers, json=payload)
+
+    if response.status_code != 201:
+        logger.error("Failed to create or update file: %s", response.text)
+    else:
+        logger.info("File created or updated successfully")
 
 
 def issue_comment(data):
