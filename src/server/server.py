@@ -1,9 +1,10 @@
+#!/usr/bin/env python3
 from flask import Flask, request, abort
 import logging
 import sys
-from src.config.config import ConfigParser
-from src.config.setGithub import SetGithub
-from src.server.events.events import Events
+from config.config import ConfigParser
+from config.setGithub import SetGithub
+from server.events.events import Events
 import requests
 
 class Server:

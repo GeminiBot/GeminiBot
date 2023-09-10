@@ -1,4 +1,4 @@
-from src.config.config import ConfigParser
+from config.config import ConfigParser
 import requests
 
 class SetGithub:

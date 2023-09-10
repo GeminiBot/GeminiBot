@@ -1,4 +1,5 @@
-from src.server.server import Server
+#!/usr/bin/env python3
+from server.server import Server
 import os
 import time
 import subprocess

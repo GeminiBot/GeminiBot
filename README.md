@@ -3,11 +3,9 @@
 <p align="center">
     <a href="https://github.com/GeminiBot/GeminiBot/blob/main/LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-brightgreen.svg?style=for-the-badge" alt="License: MIT">
-    </a>
-    <a>
+    </a><a>
         <img src="https://img.shields.io/badge/python-version?style=for-the-badge" alt="Python: 3.7">
-    </a>
-    <a>
+    </a><a>
         <img src="https://komarev.com/ghpvc/?username=GeminiBot&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="GeminiBot"/>
     </a>
 </p>
@@ -29,6 +27,19 @@ I help you to develop for you. I read your Issue and I try to solve them well.
 <a href="https://github.com/anuraghazra/github-readme-stats">
   <img src="https://github-readme-stats.vercel.app/api?username=GeminiBot&theme=omni" />
 </a>
+
+
+## **SETUP**
+
+```sh
+# Connect ngrok account
+ngrok authtoken <Your Authtoken>
+# Launch ngrok server
+ngrok http 4040
+# Launch Gemini server
+cd ./src/server/
+./server.py
+```
 
 
 <div id='license'/>
